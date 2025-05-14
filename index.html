@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first tamblet java</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Include SweetAlert CSS and JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <!-- automatic typing -->
+  <div class="typing">
+  </div>
+  <div class="button-typing">
+<button id="button-one">text</button>
+  </div>
+ 
+  <!-- hide and show password 1/2/2025 -->
+  <form class="pass-form" action="">
+<input class="pass" type="password">
+<i class="fa-regular fa-eye"></i>
+  </form>
+        
+
+  <!-- count letters -->
+  <form>
+    <textarea maxlength="100" id="text" rows="8" cols="80"></textarea>
+    <span id="count">100</span>
+  </form>
+      <!--16/1/2025  -->
+<!-- QUIZ -->
+ <div class="quiz-app">
+  <div class="quiz-info">
+    <div class="category">category: <span>HTML & CSS</span></div>
+    <div class="q-count">Questions Count: <span></span></div>
+  </div>
+      <div class="timer">
+        <span class="start">START</span>
+        <span class="time"></span>
+    </div>
+  <div class="q-area">
+  </div>
+  <div class="answar-area">
+  </div>
+  <button class="submit-button">Submit Answar</button>
+  <div class="bollutes">
+    <div class="spans">
+    </div>
+    <div class="count-down">
+    </div>
+  </div>
+  <div class="results">
+  </div>
+ </div>
+<!-- QUIZ -->
+  <!-- 3/1/2025 -->
+   <div class="slider-content">
+    <div id="slider-numb" class="slider-numb">slide #6</div>
+    <img  src="imgs/articles03.jpg" alt="">
+    <img src="imgs/articles04.jpg" alt="">
+    <img src="imgs/articles06.jpg" alt="">
+    <img src="imgs/articles07.jpg" alt="">
+    <img class="active" src="imgs/articles08.jpg" alt="">
+   </div>
+   <div class="slider-controls">
+    <span id="prev" class="prev">pervious</span>
+    <span id="indicators" class="indicators">
+    </span>
+    <span id="next" class="next">next</span>
+   </div>
+   <!-- todo list -->
+    <div class="task-container">
+      <div class="add-task">
+        <input type="text">
+        <span class="plus">+</span>
+      </div>
+      <div class="task-content">
+        <span class="no-tasks">no tasks to show</span>
+      </div>
+    </div>
+    <div class="task-state">
+      <div class="tasks-count">
+        tasks <span>0</span>
+      </div>
+      <div class="tasks-completed">
+        completed <span>0</span></div>
+    </div>
+
+    <!-- todo list -->
+    
+<div class="container">
+  <form action="">
+    <input type="text" class="input" name="text">
+    <input type="submit" class="add" value="add task">
+  </form>
+  <div class="tasks"></div>
+</div>
+   <!-- colors test -->
+
+<ul class="exp">
+  <li class="active" data-color="red"></li>
+  <li data-color="green"></li>
+  <li data-color="blue"></li>
+  <li data-color="black"></li>
+</ul>
+ <div class="experiment"></div>
+
+<!-- rapositry -->
+<div class="repo-container">
+  <div class="get-repos">
+    <input id="repo-input" type="text" placeholder="Gethub Username">
+    <span class="get-button">Get Repos</span>
+  </div>
+  <div class="show-data">
+    <span>No Repos To Show</span>
+  </div>
+</div>
+<script src="java/tests.js"></script>
+  <script src="java/main.js"></script>  
+</body>
+</html>

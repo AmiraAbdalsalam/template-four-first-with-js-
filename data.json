@@ -1,0 +1,90 @@
+ [
+    {
+        "title": "way we use <br> for?",
+        "answar-1": "to make text bold",
+        "answar-2": "to add break line",
+        "answar-3": "to make text italic",
+        "answar-4": "to make horizontal line",
+        "right_answer": "to add break line"
+    },
+    {
+        "title": "What does CSS stand for?",
+        "answar-1": "Cascading Style Sheets",
+        "answar-2": "Colorful Style Sheets",
+        "answar-3": "Creative Style Sheets",
+        "answar-4": "Computer Style Sheets",
+        "right_answer": "Cascading Style Sheets"
+    },
+    {
+        "title": "Which HTML attribute is used to define inline styles?",
+        "answar-1": "font",
+        "answar-2": "styles",
+        "answar-3": "class",
+        "answar-4": "style",
+        "right_answer": "style"
+    },
+    {
+        "title": "Which is the correct CSS syntax?",
+        "answar-1": "body:color=black;",
+        "answar-2": "body {color: black;}",
+        "answar-3": "{body;color:black;}",
+        "answar-4": "{body:color=black;}",
+        "right_answer": "body {color: black;}"
+    },
+    {
+        "title": "How do you insert a comment in a CSS file?",
+        "answar-1": "// this is a comment",
+        "answar-2": "' this is a comment",
+        "answar-3": "/* this is a comment */",
+        "answar-4": "// this is a comment //",
+        "right_answer": "/* this is a comment */"
+    },
+    {
+        "title": "Which property is used to change the background color?",
+        "answar-1": "color",
+        "answar-2": "bgcolor",
+        "answar-3": "background-color",
+        "answar-4": "background",
+        "right_answer": "background-color"
+    },
+    {
+        "title": "How do you add a background color for all <h1> elements?",
+        "answar-1": "h1 {background-color:#FFFFFF;}",
+        "answar-2": "h1.all {background-color:#FFFFFF;}",
+        "answar-3": "all.h1 {background-color:#FFFFFF;}",
+        "answar-4": "h1 {bgcolor:#FFFFFF;}",
+        "right_answer": "h1 {background-color:#FFFFFF;}"
+    },
+    {
+        "title": "Which CSS property controls the text size?",
+        "answar-1": "font-style",
+        "answar-2": "text-size",
+        "answar-3": "font-size",
+        "answar-4": "text-style",
+        "right_answer": "font-size"
+    },
+    {
+        "title": "How do you display hyperlinks without an underline?",
+        "answar-1": "a {text-decoration:none;}",
+        "answar-2": "a {underline:none;}",
+        "answar-3": "a {decoration:no-underline;}",
+        "answar-4": "a {text-decoration:no-underline;}",
+        "right_answer": "a {text-decoration:none;}"
+    },
+    {
+        "title": "Which property is used to change the font of an element?",
+        "answar-1": "font-family",
+        "answar-2": "font-style",
+        "answar-3": "font-weight",
+        "answar-4": "font-size",
+        "right_answer": "font-family"
+    },
+    {
+        "title": "How do you make each word in a text start with a capital letter?",
+        "answar-1": "text-transform:capitalize",
+        "answar-2": "text-style:capitalize",
+        "answar-3": "transform:capitalize",
+        "answar-4": "text-capitalize",
+        "right_answer": "text-transform:capitalize"
+    }
+]

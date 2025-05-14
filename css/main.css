@@ -1,0 +1,566 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.slider-content{
+    position: relative;
+    margin: 10px auto;
+    width: 650px;
+    height: 350px;
+}
+.slider-content img{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s;
+    z-index: 1;
+}
+.slider-content img.active{
+    opacity: 1;
+}
+.slider-content .slider-numb{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #fcfcfc;
+    background-color: rgb(255, 106, 255, 0.7);
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 4px;
+    z-index: 2;
+}
+.slider-controls{
+    width: 650px;
+    height: 100px;
+    margin: auto;
+}
+.slider-controls .prev,
+.slider-controls .next{
+color: white;
+background-color: #009688;
+font-size: 16px;
+padding: 5px;
+text-align: center;
+cursor: pointer;
+border-radius: 4px;
+width: 20%;
+user-select: none;
+}
+.slider-controls .prev{
+    float: left;
+}
+.slider-controls .next{
+    float: right;
+}
+.slider-controls .prev.disable,
+.slider-controls .next.disable{
+    background-color: rgba(0, 150, 136, 0.5);
+    cursor: no-drop;
+}
+.slider-controls .indicators{
+    width: 60%;
+    float: left;
+}
+.slider-controls .indicators ul{
+    text-align: center;
+    margin: 0;
+    list-style: none;
+}
+.slider-controls .indicators ul li{
+    display: inline-block;
+    color: white;
+    background-color: #333;
+    font-weight: bold;
+    width: 28px;
+    height: 28px;
+    line-height: 20px;
+    margin: 0 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+}
+.slider-controls .indicators ul li.active{
+    background-color: #009688;
+}
+/* task */
+.task-container{
+    margin: 30px auto;
+    width: 600px;
+    background-color: #f6f6f6;
+}
+.task-container .add-task{
+    position: relative;
+    padding: 15px;
+    background-color: #009688;
+}
+.task-container .add-task input{
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    width: calc(100% - 15px);
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+    color: #fff;
+    
+}
+.task-container .add-task input:focus{
+    outline: none;
+}
+.task-container .add-task .plus{
+    position: absolute;
+    right: 12px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #009688;
+    background-color: #f6f6f6;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    text-align: center;
+    width: 43px;
+    height: 43px;
+    cursor: pointer;
+    line-height: 43px;
+}
+.task-container .add-task .plus:hover{
+    transform: rotate(90deg);
+}
+.task-container .task-content{
+   padding: 15px;
+}
+.task-container .task-content .no-tasks{
+font-size: 15px;
+      color: #777;
+}
+.task-container .task-content .no-tasks dialog{
+    position: absolute;
+    margin: auto;
+}
+.task-container .task-content > span{
+    display: block;
+    padding: 10px;
+    background-color: #fff;
+    
+}
+.task-container .task-content > span:not(:last-child){
+    margin-bottom: 10px;
+}
+.task-container .task-content .task-box .delete{
+    background-color: #E91E63;
+    float: right;
+    padding: 4px 10px;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.task-container .task-content .task-box.finshed{
+    text-decoration: line-through;
+}
+.task-state{
+    position: relative;
+    margin: 10px auto;
+    font-size: 12px;
+    overflow: hidden;
+    width: 600px;
+    height: 110px;
+}
+.task-state .tasks-count{
+    width: 50%;
+    padding: 10px;
+    float: left;
+}
+.task-state .tasks-completed{
+    width: 50%;
+    padding: 10px;
+    float: right;
+    text-align: right;
+}
+.task-state .tasks-count span,
+.task-state .tasks-completed span{
+    padding: 1px 5px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+}
+.task-state .tasks-count span{
+    background-color: #E91E63;
+}
+.task-state .tasks-completed span{
+    background-color: #03A9F4;
+}
+.task-state .delete-all{
+    position: absolute;
+    color: #fff;
+    background-color: #E91E36;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    right: 5px;
+    top: 50px;
+}
+.task-state .finish-all{
+    position: absolute;
+    color: #fff;
+    background-color: #03A9F4;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    left: 5px;
+    top: 50px;
+}
+/* task */
+/*  */
+ul.exp{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 20px auto;
+    background-color: white;
+    width: 400px;
+}
+ul.exp li{
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0.4;
+    border: 2px solid transparent;
+}
+ul.exp li:nth-child(1){
+    background-color: red;
+}
+ul.exp li:nth-child(2){
+    background-color: green;
+}
+ul.exp li:nth-child(3){
+    background-color: blue;
+}
+ul.exp li:nth-child(4){
+    background-color: black;
+}
+.experiment{
+    width: 500px;
+    background-color: red;
+    height: 250px;
+    margin: 20px auto;
+}
+ul li:hover,
+ul.exp li.active{
+    opacity: 1;
+}
+.container{
+     margin: 50px auto;
+}
+form{
+    margin: 20px auto;
+    width: 400px;
+    background-color: #ccc;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+form .input{
+    flex: 1;
+    padding: 20px;
+}
+form .add{
+    color: white;
+    background-color: #ff4400;
+    border: none;
+    font-size: 24px;
+}
+.tasks{
+       margin: 20px auto;
+    width: 400px;
+        background-color: #ccc;
+    padding: 20px;
+}
+
+/* repos */
+.repo-container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 800px;
+    margin: 20px auto;
+}
+
+.repo-container .get-repos{
+    background-color: #f4d4035e;
+    padding: 20px;
+    }
+    .repo-container .get-repos input{
+        width: 84%;
+        padding: 15px;
+        border: none;
+        font-size: 20px;
+    }
+    .repo-container .get-repos input:focus{
+        outline: 2px solid tomato;
+    }
+    .repo-container .get-repos .get-button{
+        color: #fff;
+        background-color: tomato;
+        padding: 15px;
+        cursor: pointer;
+        margin-left: 5px;
+        border-radius: 7px;
+    }
+    .repo-container .show-data{
+        position: relative;
+        background-color: #f4d40378 ;
+        padding: 15px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .repos-box{
+        margin-bottom: 10px;
+        background-color: #fff;
+        padding: 15px;
+    }
+    .repos-box:last-child{
+        margin-bottom: 0;
+    }
+    .repos-box a,
+    .repos-box span {
+        text-decoration: none;
+        color: #fff;
+         padding: 4px;
+        float: right;
+        font-size: 14px;
+        width: 90px;
+        border-radius: 4px;
+        margin-left: 4px;
+        text-align: center;
+    }
+    .repos-box a{
+        background-color: #E91E36;
+    }
+    .repos-box span{
+       background-color: #009688;
+    }
+
+    /* quiz */
+    .quiz-app{
+        position: relative;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin: 20px auto;
+        width: 800px;
+        padding: 15px;
+        background-color: #f8f8f8;
+    }
+    .quiz-app .quiz-info{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 20px;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: 16px;
+    }
+    .quiz-app .quiz-info span{
+        font-size: 18px;
+    }
+    .quiz-app .quiz-info .q-count span{
+color: red;
+    }
+    .quiz-app .q-area{
+        background-color: #fff;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-top: 15px;
+    }
+     .quiz-app .q-area h2{
+        margin: 0;
+     }
+    .quiz-app .answar-area{
+        background-color: #fff;
+       padding: 0 20px 20px;
+    }
+    .quiz-app .answar-area .answar{
+        background-color: #f8f8f8;
+        padding:15px;
+         border-bottom: 1px solid #dfdfdf;
+    }
+    .quiz-app .answar-area .answar:last-child {
+        border-bottom: none;
+    }
+    .quiz-app .answar-area .answar label{
+       color: #777;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-left: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        position: relative;
+    top: -1px;
+    }
+    .quiz-app .answar-area .answar input:checked + label{
+ color: #0075ff;
+    }
+     .quiz-app .submit-button{
+margin: 20px auto;
+text-align: center;
+background-color: #0075ff;
+padding: 15px;
+width: 100%;
+color: white;
+border: none;
+     font-size: 20px;
+     font-weight: bold;
+     border-radius: 6px;
+     cursor: pointer;
+}
+.quiz-app .bollutes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #dfdfdf;
+}
+.quiz-app .bollutes .spans{
+    float: left;
+    width: 50%;
+    display: flex;
+    gap: 5px;
+    padding: 20px;
+}
+.quiz-app .bollutes .spans span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    
+}
+.quiz-app .bollutes .spans span.on{
+    background-color: #0075ff;
+}
+.quiz-app .bollutes .count-down{
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #E91E36;
+    color: #f6f6f6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 74px;
+    height: 31px;
+    text-align: center;
+}
+.quiz-app .results{
+    padding: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+.quiz-app .results span{
+    font-weight: bold;
+    font-size: 20px;
+}
+.quiz-app .results.moderat{
+    background-color: #a0b7d1;
+}
+.quiz-app .results.moderat span{
+color: #0075ff;
+}
+.quiz-app .results.perfect{
+    background-color: #d0c1e6;
+}
+.quiz-app .results.perfect span{
+    color: #7632d5;
+}
+.quiz-app .results.bad{
+    background-color: rgb(223, 157, 157);
+}
+.quiz-app .results.bad span{
+    color: red;
+}
+.quiz-app .timer{
+    background-color: #f6f6f6;
+    padding: 20px;
+}
+.quiz-app .timer .start{
+    background-color: #E91E36;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.quiz-app .timer .time{
+    float: right;
+     background-color: #E91E36;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-top: -15px;
+}
+      /* quiz */
+
+      /* typing */
+      .typing{
+        text-align: center;
+      }
+      .button-typing{ 
+        margin: 20px auto;
+        text-align: center;
+      }
+      .button-typing button{
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #0075ff;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .typing p{
+        font-size: 18px;
+        background-color: #777;
+        width: fit-content;
+        text-align: center;
+        margin: 40px auto;
+        padding: 20px;
+        color: white;
+      }
+      /* typing */
+      .zero{
+        color: #E91E36;
+      }
+
+      /* password */
+
+      .pass-form i{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 15px;
+        padding-left: 0;
+        font-weight: 800;
+      }
+      .pass-form input{
+        width: 90%;
+        padding: 15px;
+        font-size: 25px;
+        outline: none;
+        border: none;
+        
+      }
+
+      
